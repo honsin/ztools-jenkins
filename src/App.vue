@@ -71,6 +71,14 @@ const handleOpenSettings = () => {
   showSettings.value = true
 }
 
+/**
+ * 新增实例 - 始终进入添加模式
+ */
+const handleAddInstance = () => {
+  editInstanceId.value = undefined
+  showSettings.value = true
+}
+
 onMounted(async () => {
   await loadInstances()
   loadFavorites()
@@ -102,6 +110,7 @@ onMounted(async () => {
       @favorite-click="handleFavoriteClick"
       @view-change="handleViewChange"
       @open-settings="handleOpenSettings"
+      @add-instance="handleAddInstance"
     />
 
     <main class="main-content">
