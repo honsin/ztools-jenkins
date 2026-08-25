@@ -18,6 +18,8 @@ npm run build    # vue-tsc 类型检查 + vite 构建 + prepare-package + create
 npm run test     # vitest run
 ```
 
+> **每次改完代码自动跑一次 `npm run build` 验证** —— vue-tsc 会暴露类型错误，vite 构建会暴露模板 / 资源问题，create-zip 会暴露打包脚本问题。任何一步失败都不算改完。
+
 ## 核心功能
 
 - **多实例管理**：添加 / 编辑 / 删除多个 Jenkins 实例，配置项（名称、URL、用户名、API Token）；保存前必须测试连接通过
