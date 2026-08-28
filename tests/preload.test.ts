@@ -63,8 +63,8 @@ function loadJenkinsService() {
     }
   }
 
-  const source = readFileSync(resolve('preload.js'), 'utf8')
-  runInNewContext(source, sandbox, { filename: 'preload.js' })
+  const source = readFileSync(resolve('preload.cjs'), 'utf8')
+  runInNewContext(source, sandbox, { filename: 'preload.cjs' })
 
   return {
     service: sandbox.window.services.jenkins,

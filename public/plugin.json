@@ -5,9 +5,9 @@
   "description": "Jenkins Lite 一款轻量级的 Jenkins 辅助工具。告别繁琐的网页操作，插件提供实时查询与一键构建功能，帮助开发者快速检索任务状态、监控构建进度并秒级触发构建，显著提升 CI/CD 工作效率。",
   "author": "康康学长",
   "version": "1.4.0",
-  "main": "index.html",
-  "preload": "preload/services.js",
   "logo": "logo.png",
+  "main": "index.html",
+  "preload": "preload.cjs",
   "development": {
     "main": "http://localhost:5180"
   },
@@ -16,7 +16,7 @@
       "code": "jenkins",
       "explain": "Jenkins 快速触发构建与状态查询",
       "icon": "logo.png",
-      "cmds": ["jenkins", "Jenkins"]
+      "cmds": ["jenkins", "Jenkins", "j", "jl"]
     },
     {
       "code": "jenkins-build",

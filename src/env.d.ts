@@ -7,7 +7,7 @@ declare module '*.vue' {
   export default component
 }
 
-// Preload services 类型声明（对应 public/preload/services.js）
+// Preload services 类型声明（对应 public/preload.cjs，根 preload.cjs 的 build 时同步副本）
 interface JenkinsService {
   getJobs(url: string, username: string, apiToken: string): Promise<{ data: any[]; error: string | null }>
   getBuilds(url: string, username: string, apiToken: string, jobName: string): Promise<{ data: any[]; error: string | null }>
@@ -15,6 +15,7 @@ interface JenkinsService {
   getViews(url: string, username: string, apiToken: string): Promise<{ data: any[]; error: string | null }>
   getViewJobs(url: string, username: string, apiToken: string, viewName: string): Promise<{ data: any[]; error: string | null }>
   testConnection(url: string, username: string, apiToken: string): Promise<{ success: boolean; error: string | null }>
+  getBuildConsole(url: string, username: string, apiToken: string, jobName: string, buildNumber: number): Promise<{ data: string; error: string | null }>
 }
 
 interface Services {

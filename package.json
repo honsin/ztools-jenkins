@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest run",
-    "build": "vue-tsc && vite build && node scripts/prepare-package.mjs && node scripts/create-zip.mjs"
+    "build": "vue-tsc && node scripts/sync-public.mjs && vite build && node scripts/prepare-package.mjs && node scripts/create-zip.mjs"
   },
   "dependencies": {
     "vue": "^3.5.13"

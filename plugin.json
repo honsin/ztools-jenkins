@@ -1,20 +1,34 @@
 {
+  "$schema": "node_modules/@ztools-center/ztools-api-types/resource/ztools.schema.json",
   "name": "jenkins-lite",
   "title": "Jenkins Lite",
-  "description": " 一款轻量级 Jenkins 辅助工具。告别繁琐的网页操作，可轻松实现实时查询任务状态、监控构建进度、一键触发构建，可显著提升 CI/CD 效率。",
-  "version": "1.4.0",
-  "main": "index.html",
-  "logo": "logo.png",
+  "description": "Jenkins Lite 一款轻量级的 Jenkins 辅助工具。告别繁琐的网页操作，插件提供实时查询与一键构建功能，帮助开发者快速检索任务状态、监控构建进度并秒级触发构建，显著提升 CI/CD 工作效率。",
   "author": "康康学长",
-  "preload": "preload.js",
+  "version": "1.4.0",
+  "logo": "logo.png",
+  "main": "index.html",
+  "preload": "preload.cjs",
   "development": {
     "main": "http://localhost:5180"
   },
   "features": [
     {
       "code": "jenkins",
-      "explain": "Jenkins 任务管理 - 查看任务状态、触发构建、查看构建历史",
-      "cmds": ["jenkins", "jenkins lite", "j", "jl"]
+      "explain": "Jenkins 快速触发构建与状态查询",
+      "icon": "logo.png",
+      "cmds": ["jenkins", "Jenkins", "j", "jl"]
+    },
+    {
+      "code": "jenkins-build",
+      "explain": "触发 Jenkins 构建",
+      "icon": "logo.png",
+      "cmds": ["构建", "build"]
+    },
+    {
+      "code": "jenkins-favorite",
+      "explain": "收藏的 Jenkins Jobs",
+      "icon": "logo.png",
+      "cmds": ["jenkins收藏", "jenkins-fav"]
     }
   ]
 }
