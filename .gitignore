@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist.zip
+*.zip
+
+# Environment files (contain secrets)
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+
+# Agent / local tool settings
+.qoder/
+
+# Logs
+*.log
